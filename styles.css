@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+}
+:root{
+    --primary : rgb(0, 0, 0, 0);
+    --secondary : rgb(81, 81, 81);
+    --tertiary : rgb(89, 179, 202);
+    --background : rgb(227, 241, 245);
+    --font : 'Source Code Pro', monospace;
+    --trans : 0.1s ease-in-out;
+    --para : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    display: grid;
+}
+.nav-bar{
+    background-color: var(--background);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 1; grid-column: 1;
+    height: 100%; width: 27vw;
+}
+.nav-bar img{
+    position: relative;
+    top: 2rem;
+    height: 10rem; width: 9rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.nav-bar h3, h4, h5{
+    position: relative;
+    top: 3rem;
+    font-family: 'Source Code Pro', monospace;
+}
+.nav-bar h4, h5{
+    margin-top: 5px;
+    font-size: small;
+    align-items: center;
+}
+.nav-bar span{
+    color: var(--tertiary);
+}
+.nav-bar h3{
+    font-size: x-large;
+    font-weight:700;
+}
+.options{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 5rem;
+    list-style: none;
+    align-items: center;
+    justify-content: start;
+    font-family: 'Source Code Pro', monospace;
+}
+.options li a{
+    text-decoration: none;
+    color: black;
+}
+.copy{
+    position: relative;
+    top: 3rem;
+    color: var(--secondary);
+}
+.hero{
+    position: relative;
+    left: 14vw;
+    grid-row: 1; grid-column: 2;
+    width: 72vw; height: 100%;   
+}
+.main-hero{
+    display: flex;
+    height: 100vh; width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+.main-hero h1{
+    font-family: var(--font);
+    font-size: 6rem;
+}
+.main-hero h2{
+    font-family: var(--font);
+    font-size: 5rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info span{
+    color: var(--tertiary);
+}
+.info h4{
+    position: relative;
+    top: 0;
+    font-family: cursive;
+    font-weight: lighter;
+}
+.btn{
+    width: 7rem;
+    padding: 10px 1rem;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--tertiary);
+    color: var(--tertiary);
+    border-radius: 8px;
+    font-weight: 900;
+}
+.main-hero img{
+    height: 80vh;
+    filter: grayscale(100);
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--tertiary);
+    color: white;
+    transition: var(--trans);
+}
+.about{
+    position: relative;
+    width: 90%; height: 90vh;
+    padding-top:4rem;
+    left: 3rem;
+}
+.skills{
+    position: relative;
+    width: 90%; height: 80vh;
+    padding-top: 2rem;
+    left: 3rem; 
+    top: 3rem;
+}
+.skills h3{
+    font-family: var(--para);
+    font-size: smaller;
+    color: var(--secondary);
+}
+.about h3, .skills h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+    color: var(--secondary);
+}
+.about h2, .skills h2{
+    font-size: 40px;
+    font-family: var(--font);
+}
+.about p, .skills p{
+    width: 95%;
+    position: relative;
+    top: 2rem;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about span{
+    color: var(--tertiary);
+}
+#menu{
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 2rem;
+}
+.options li a:hover{
+    cursor: pointer;
+    color: var(--tertiary);
+    border-bottom: 2px solid var(--tertiary);
+    transition: var(--trans);
+}
+.container, .cards{
+    position: relative;
+    display: grid;
+    width: 70%;
+    top: 4rem; gap: 2rem;
+}
+.container img{
+    height: 3rem; width: 3rem;
+}
+.container div{
+    padding: 0 1rem;
+    height: 7rem; width: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 1; grid-column: 1;
+    box-shadow: 20px;
+    justify-content: center;
+    background-color: var(--background);
+    border-bottom: 2px solid var(--tertiary);
+}
+.skills p{
+    margin-top: 2rem;
+}
+.cards{
+    width: 80%;
+}
+.cards div div{
+    width: 100%;
+    height: 5px;
+    margin-top: 0.5rem;
+    background-color: var(--background);
+    border-radius: 2rem;
+}
+#cpp{
+    width: 90%; background-color: #3081D0;
+}
+#c{
+    width: 45%; background-color: red;
+}
+#htm{
+    width: 95%; background-color:  rgb(255, 136, 0);
+}
+#cs{
+    width: 75%; background-color: #0C356A;
+}
+#njs{
+    width: 30%; background-color: rebeccapurple;
+}
+#jss{
+    width: 65%; background-color: green;
+}
+#cards1{
+    grid-row: 1; grid-column: 1;
+}
+#cards2{
+    grid-row: 1; grid-column: 2;
+}
+#cards3{
+    grid-row: 2; grid-column: 1;
+}
+#cards4{
+    grid-row: 2; grid-column: 2;
+}
+#cards5{
+    grid-row: 3; grid-column: 1;
+}
+#cards6{
+    grid-row: 3; grid-column: 2;
+}
+#card2{
+    grid-row: 1; grid-column: 2;
+}
+#card3{
+    grid-row: 1; grid-column: 3;
+}
+#tag{
+    width: 90%; height: max-content;
+    position: relative;
+    top: 6rem;
+    padding: 1rem 2rem;
+    background-color: var(--tertiary);
+    font-size: 10vh;
+}
+#tag p{
+    font-size: 2rem;
+    font-family: var(--font);
+}
+#tag button{
+    position: relative;
+    margin-top: 3rem;
+    width: 200px; height: 2.5rem;
+    border: 1px solid black;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: transparent;
+}
+#tag button:hover{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(175, 231, 247);
+    transition: var(--trans);
+}
+@media(max-width : 1200px){
+    body{
+        display: block;
+        width: 100%;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .hero{
+        left: 0;
+        grid-column: 1;
+        width: 100%;
+    }
+    .main-hero{
+        position: relative;
+        left: 2rem;
+    }
+    #menu{
+        display: block;
+    }
+    .about{
+        width: 95%;
+        left: 2rem;
+        height: fit-content;
+    }
+    #tag{
+        width: 90%;
+    }
+    .skills{
+        margin-top: 2rem;
+        top: 5rem;
+        width: 95%;
+        left: 2rem;
+        height: fit-content;
+    }
+}
+@media(max-width : 880px){
+    body{
+        display: block;
+        width: 100%;
+    }
+    .hero{
+        width: 90%;
+    }
+    .main-hero{
+        width: 100%; height: 100vh;
+        background: url(finalprofgrey.png) no-repeat; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+    .about{
+        width: 100%;
+        left: 2rem;
+        height: fit-content;
+    }
+    .main-hero h1{
+        font-size: 10vh;
+    }
+    .main-hero h2{
+        font-size: 8vh;
+    }
+    .main-hero span{
+        font-size: 8vh;
+    }
+    .main-hero img{
+        display: none;
+    }
+    #tag{
+        width: 80%;
+        height: fit-content;
+    }
+    #tag p{
+        font-size: 4vh;
+    }
+    #tag button{
+        width: 100%;
+    }
+    .skills{
+        margin-top: 2rem;
+        width: 100%;
+        left: 2rem;
+        height: fit-content;
+    }
+}
+@media (max-width : 605px){
+    body{
+        width: 100%;
+    }
+    .hero{
+        width: 90%;
+    }
+    .main-hero{
+        width: 100%;
+    }
+    .container{
+        width: 80%;
+    }
+    #tag p{
+        font-size: 4vh;
+    }
+    .container div{
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #card1{
+        grid-row: 1; grid-column: 1;
+    }
+    #card2{
+        grid-row: 2;grid-column: 1;
+    }
+    #card3{
+        grid-row: 3; grid-column: 1;
+    }
+    #tag{
+        width: 70%;
+    }
+    .skills{
+        margin-top: 2rem;
+        width: 100%;
+        top: 8rem;
+        height: fit-content;
+    }
+    #cards1{
+        grid-row: 1; grid-column: 1;
+    }
+    #cards2{
+        grid-row: 2; grid-column: 1;
+    }
+    #cards3{
+        grid-row: 3; grid-column: 1;
+    }
+    #cards4{
+        grid-row: 4; grid-column: 1;
+    }
+    #cards5{
+        grid-row: 5; grid-column: 1;
+    }
+    #cards6{
+        grid-row: 6; grid-column: 1;
+    }
+    .about{
+        width: 100%;
+        height: fit-content;
+    }
+}
